@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body, h1, h2, h3, h4, p{
+    margin: 0;
+
+}
+
+a{
+    text-decoration: none;
+
+}
+
+body{
+    background-color: rgb(245, 225, 246);
+
+}
+
+.wrap header{
+    width: 100%;
+    background-color: rgb(137, 13, 153);
+    min-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.wrap content{
+    width: 836px;
+    margin: 0 auto;
+
+}
+
+header {
+    background-color: #bd8ccd;
+    width: 100%;height: 60px;
+    padding: 6px 0;
+    display: flex;
+
+}
+
+header .menu {
+    margin-right: 18px;
+}
+
+header .logoicon {
+    display: block;
+    width: fill;
+    text-indent: -9999px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+    padding: 0% 0px 0px 40px ;
+
+}
+
+header .logo{
+    display: block;
+    width: 250px; height: fit-content;
+    text-indent: -9999px;
+    object-fit: cover;
+    padding: 15px 20px 50px 20px ;
+}
+
+header ul {
+    margin: 0;padding: 0px 80px 0px 0px;
+    list-style: none;
+    gap: 48px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+}
+
+header ul a {
+color: #ffffff;
+font-size: 14px;
+font-weight: 600;
+display: block;
+padding: auto 50px;
+
+}
+
+header ul a:hover{
+    color: #56207d;
+    font-weight: bolder ;
+
+}
+
+header nav {
+    padding: 20px 5px 5px 50px ;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;     /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+
+    
+
+}
+
+header .login {
+    margin-left: auto;
+    padding: 5px 15px 5px 20px; 
+    width: 100px;height: 40px;
+    color: #ffffff;
+    background-color: #56207d;
+    width: max-content;
+    border-radius: 30px;/*設定圓角*/
+    overflow: fill ;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;     /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+   
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+    font-weight: bold; /* 變粗 */
+
+} 
+
+.photo {
+    width: 100%;
+    display: flex;
+}
+
+    main {
+        color: #56207d;
+        background-color: #ffffff;
+
+        max-width: 600px;        /* 最大寬度 */
+        min-width: 400px;        /* 最小寬度 */
+        margin: 40px auto;       /* 水平置中，上下間距 40px */
+        padding: 0 20px 0 50px;           /* 內邊距，可調整文字和圖片距離邊框 */
+        border-radius: 15px;/*設定小卡圓角*/
+
+        display: flex;
+        align-items: center;     /* 垂直置中 */
+        justify-content: space-between;
+        box-shadow: 4px 5px 6px rgba(124, 32, 121, 0.5);
+
+
+    }
+    main h1 {
+        font-size: 40px;
+        font-family: serif;
+        letter-spacing: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-shrink: 0;
+  
+    }
+    
+
+
+    .main-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    padding-left: 50px;
+
+
+    
+    }
+
+    .main-search {
+        color:#bd8ccd;
+        background-color: #ffffff;
+
+        max-width: 450px; 
+        margin:  0 auto 40px auto;
+        padding: 3px 0px 3px 20px;
+
+        border-radius: 5px;/*設定小卡圓角*/
+
+        
+        display: flex;
+        align-items: center;     /* 垂直置中 */
+        justify-content: space-between;
+        z-index: 10;            /* 確保在內容上面 */
+        box-shadow: 4px 5px 6px  rgba(124, 32, 121, 0.5);
+        
+    }
+
+ .main-search h3 {
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-shrink: 0;
+        font-weight: 200; /* ★ 文字變細 */
+
+    }
+
+    .main-search input[type="search"] {
+        border: none;            /* 移除預設邊框 */
+        outline: none;           /* 選中時不要出現藍色邊框 */
+        width: 100%;             /* 滿寬填滿外層容器 */
+        height: 100%;            /* 高度與外層容器相同 */
+        padding-left: 0%;
+        font-size: 15px;
+        background-color: transparent; /* 背景透明，套用外層背景 */
+        color: #56207d;          /* 文字顏色 */
+
+    }
+
+    .main-search img{
+        width: 20px;
+        margin-right: 10px;
+    }
+
+.main-list{
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto; /* ★ 整個區塊置中 */
+
+    justify-content: center;
+
+    /* 區塊寬度限制 */
+    width: 100%;        /* 先讓它可以擴展到100% */
+    max-width: 1200px;  /* 最多到1200px */
+    min-width: 1000px;   /* 縮到800px就不再縮小 */
+
+    margin: 0 auto;     /* 水平置中 */
+
+}
+.road
+{
+    color: #56207d;
+    margin: 10px ;
+    padding-left: 135px;
+    width: 100%;        /* 先讓它可以擴展到100% */
+    max-width: 1200px;  /* 最多到1200px */
+    min-width: 800px;   /* 縮到800px就不再縮小 */
+    display: flex;        /* ★ 關鍵 */
+    align-items: center; 
+    
+}
+
+.road-image{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-right: 10px;
+
+}
+
+.card {
+    color: #000000;
+    font-family: sans-serif;
+    background-color: #ffffff;
+    width: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 3px 3px 6px rgba(124, 32, 121, 0.5);
+        }
+       
+.card-background{
+    width: 100%;/*讓圖檔的寬度等於上一層元素的寬度*/
+    height: 150px;
+    overflow: hidden;
+    object-fit: cover;  /* 關鍵 */
+}
+.card-image{
+    width: 80px;
+    height: 80px;
+    overflow:fill;
+    object-fit: cover;  /* 關鍵 */
+    flex-shrink: 0;        /* 不被擠扁 */
+
+
+}
+.card-content {
+            line-height: 180%;
+            padding: 20px 20px 20px 20px;
+}
+.card-title {
+            margin: 18x 0;
+}
+
+.card-intro {
+            margin: 0;
+            font-size: 14px;
+    }
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto; /* ★ 整個區塊置中 */
+
+    justify-content: center;
+
+    /* 區塊寬度限制 */
+    width: 100%;        /* 先讓它可以擴展到100% */
+    max-width: 1200px;  /* 最多到1200px */
+    min-width: 1000px;   /* 縮到800px就不再縮小 */
+
+    margin: 0 auto;     /* 水平置中 */
+
+}
+
+    body, h1, h2, h3, h4, p{
+    margin: 0;
+
+}
+
+a{
+    text-decoration: none;}
+
+.footer {
+  background: #c58ccf;
+  padding: 40px 60px 20px;
+  color: #3a2150;
+  font-size: 14px;
+  margin-top: 50px;
+min-width: 1200px;  
+  
+}
+
+/* 上半部四欄 */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 30px;
+}
+
+.footer-list {
+flex: 1;
+  min-width: 240px;
+  
+}
+
+/* 標題按鈕樣式 */
+.footer-title {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px 10px 20px; 
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    color: #56207d;
+    border: none;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bolder;
+    font-family: inherit;
+    line-height: normal;
+
+    cursor: pointer;
+
+}
+
+/* 文字列表 */
+.footer-content {
+    font-family: sans-serif;
+
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+
+}
+
+.footer-content li {
+
+    align-items:flex-start;
+    line-height: 1.8;
+    }
+
+/* 連結 */
+.footer-content a {
+  color: inherit;
+  text-decoration: none;
+  
+}
+
+
+.footer-content img {
+    width: 13px;
+    height: 12px;
+    object-fit: contain;
+    margin-right: 5px;
+    flex-shrink: 0;
+    align-items: center; 
+    gap: 8px;
+
+    
+}
+
+/* 社群 icon */
+.social-icons {
+
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img{
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-decoration: none;
+
+  
+}
+
+/* 下半部 */
+.footer-copyright {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;          /* 滿寬置中 */
+    height: 10px;
+    min-width: 1200px;
+     position: relative; 
+    text-align: center;   /* 文字置中 */
+    font-size: 12px;
+
+}
+
+.footer-logo {
+    position: absolute; /* 絕對定位 */
+    right: 5px;        
+    bottom: 0;          /* 貼底 */
+    width: 250px;
+    height: auto;  
+}
+
+
+</style>
+
+<body>
+    <div class="wrap-header">
+        
+        <header>
+
+            <img src="photo/christmawu Tree.gif" alt="menu" class="logoicon">
+            <img src="photo/Logo-name.png" alt="menu" class="logo">
+
+            <nav>
+                <ul>
+                    <li><a href="">委託列表</a></li>
+                    <li><a href="">創作者列表</a></li>
+                    <li><a href="">標籤搜尋</a></li>
+                    <li><a href="">使用說明</a></li>
+                    <li><a href="">關於我們</a></li>
+                </ul>
+            </nav>
+
+            <div class="login">登入/註冊</div>
+
+        </header>
+
+    </div>
+
+    <section class="main-list">
+ <main>
+        <h1>廣告招租位</h1>
+        <img src="photo/inkawu.gif" alt="" class="main-img">
+    </main>
+
+     <div class="main-search">
+    <input type="search" placeholder="搜尋...">
+    <img src="photo/search.png">
+    </div>
+
+    </section>
+    
+    <div class="road">
+        <img class="road-image" src="photo/road.png" alt="road" >
+        首頁 / 創作者列表 / 繪圖創作者
+
+         </div>
+    
+
+<section class="card-list">
+
+   <div class="card">
+        <img class="card-background" src="photo/awu-background.jpg" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/awu-main.gif">
+        <h3 class="c-row">泥鰍</h3>
+        <p class="card-intro">喜歡SM，Sleep&Money</p>
+        </div>
+    </div>
+
+  <div class="card">
+        <img class="card-background"src="photo/inkyu-background.webp" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/inkyu-main.webp">
+        <h3 class="c-row">墨墨</h3>
+        <p class="card-intro">業餘，只接非商，繪圖品質浮動大</p>
+        </div>
+    </div>
+
+ <div class="card">
+        <img class="card-background" src="photo/Sirius-background.webp" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/Sirius-main.webp">
+        <h3 class="c-row">天狼星</h3>
+        <p class="card-intro">鴨鴨好耶！委託十月關閉中</p>
+        </div>
+    </div>
+
+   <div class="card">
+        <img class="card-background" src="photo/yoshikuni-background.jpg" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/yoshikuni-main.png">
+        <h3 class="c-row">yoshikuni</h3>
+        <p class="card-intro">我熱愛畫畫</p>
+        </div>
+     </div>
+
+    <div class="card">
+        <img class="card-background" src="photo/teacat-background.jfif" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/teacat-main.jfif">
+        <h3 class="c-row">雙木林</h3>
+        <p class="card-intro">我恨畫畫</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="card-background" src="photo/mai-background.jpg" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/mai-main.jpg">
+        <h3 class="c-row">麥麥</h3>
+        <p class="card-intro">本人被大學鞭打，暫停委託中。</p>
+        </div> 
+     </div>
+
+        
+    <div class="card">
+        <img class="card-background" src="photo/inkawu.gif" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/inkawu.gif">
+        <h3 class="c-row">招租</h3>
+        <p class="card-intro">誠徵，線上肝臟設計師。</p>
+        </div>    
+    </div>
+
+        
+      <div class="card">
+        <img class="card-background" src="photo/inkawu.gif" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/inkawu.gif">
+        <h3 class="c-row">招租</h3>
+        <p class="card-intro">誠徵，線上肝臟設計師。</p>
+        </div>    
+    </div>
+
+    
+    <div class="card">
+        <img class="card-background" src="photo/inkawu.gif" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/inkawu.gif">
+        <h3 class="c-row">招租</h3>
+        <p class="card-intro">誠徵，線上肝臟設計師。</p>
+        </div>    
+    </div>
+
+    
+    <div class="card">
+        <img class="card-background" src="photo/inkawu.gif" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/inkawu.gif">
+        <h3 class="c-row">招租</h3>
+        <p class="card-intro">誠徵，線上肝臟設計師。</p>
+        </div>   
+     </div>
+
+
+      <div class="card">
+        <img class="card-background" src="photo/inkawu.gif" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/inkawu.gif">
+        <h3 class="c-row">招租</h3>
+        <p class="card-intro">誠徵，線上肝臟設計師。</p>
+        </div>   
+     </div>
+
+      <div class="card">
+        <img class="card-background" src="photo/inkawu.gif" alt="" class="awu-background">
+        <div class="card-content">
+        <img class="card-image" src="photo/inkawu.gif">
+        <h3 class="c-row">招租</h3>
+        <p class="card-intro">誠徵，線上肝臟設計師。</p>
+        </div>   
+     
+    </div>
+
+</section>
+
+ <div class="footer">
+    <div class="footer-top">
+    <!-- 聯絡我們 -->
+    <div class="footer-list">
+      <button class="footer-title">聯絡我們</button>
+      <ul class="footer-content">
+        <li><b>泥鰍好餓股份有限公司</b></li>
+        <li> <img src="photo/phone.png" alt="phone"> 0987654321</li>
+        <li><img src="photo/map-pin.png" alt="adress"> 220新北市板橋區大觀路一段59號</li>
+        <li><img src="photo/mail.png" alt="mail"> ntua11250605@gmail.com</li>
+      </ul>
+    </div>
+
+    <!-- 官方社群 -->
+    <div class="footer-list">
+      <button class="footer-title">官方社群</button>
+      <div class="social-icons">
+        <a href="try.html"><img src="photo/facebook.png" alt="phone"></a>
+        <img src="photo/instagram.png" alt="phone">
+        <img src="photo/twitter.png" alt="phone">
+        <img src="photo/youtube.png" alt="phone">
+      </div>
+    </div>
+
+    <!-- 服務條款 -->
+    <div class="footer-list">
+      <button class="footer-title">網站服務條款與規範</button>
+      <ul class="footer-content">
+        <li><a href="#">服務條款與隱私權政策</a></li>
+        <li><a href="#">用戶使用規範</a></li>
+      </ul>
+    </div>
+
+    <!-- FAQ -->
+    <div class="footer-list">
+      <button class="footer-title">FAQ</button>
+      <ul class="footer-content">
+        <li><a href="#">使用說明</a></li>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">贊助感謝</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="footer-copyright">
+    Copyright © 2025 泥鰍好餓股份有限公司
+    <img class="footer-logo" src="photo/Logo-name.png">
+</div>
+
+</body>
+
+</html>
